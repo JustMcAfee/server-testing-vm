@@ -1,0 +1,20 @@
+---
+- hosts: testserver
+  vars:
+    base_package_items:
+      - ruby
+      - python
+      - python-pip
+      - git
+      - tmux
+      - htop
+      - tig
+      - zsh
+    host_package_items: []
+    git_editor: vim
+    git_name: McAfee
+    git_email: JustMcAfee@users.noreply.github.com
+    pip_executable: '/usr/bin/pip'
+  roles:
+    - { role: linux, become: yes }
+    - unix
