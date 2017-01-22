@@ -1,0 +1,26 @@
+enable_dhcp_services: false
+samba_allow_guests: 'no'
+samba_create_domain_controller: false
+samba_security: 'user'
+samba_server_role: 'standalone server'
+samba_users:  #define users to create
+  - name: 'vagrant'  #define user name to create
+    groups:  #define groups to add user to...ensure samba_groups names exist.
+      - 'nogroup'
+      - 'securedgroup'
+      - 'testgroup'
+    smbpasswd: 'P@55w0rd'  #define samba user password
+base_package_items:
+  - ruby
+  - python
+  - python-pip
+  - git
+  - tmux
+  - htop
+  - tig
+  - zsh
+host_package_items: []
+git_editor: vim
+git_name: McAfee
+git_email: JustMcAfee@users.noreply.github.com
+pip_executable: '/usr/bin/pip'
