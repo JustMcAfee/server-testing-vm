@@ -24,3 +24,5 @@ git_editor: vim
 git_name: McAfee
 git_email: JustMcAfee@users.noreply.github.com
 pip_executable: '/usr/bin/pip'
+gem_sources:
+  - 'https://rubygems.org/'

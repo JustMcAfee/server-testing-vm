@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# vagrant plugin install vagrant-persistent-storage
+# vagrant plugin install vagrant-share vagrant-persistent-storage vagrant-serverspec
 
 Vagrant.configure("2") do |config|
 
@@ -27,5 +27,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.verbose = "v"
     ansible.playbook = "test.yaml"
+  end
+
+  config.vm.provision :serverspec do |spec|
+    spec.pattern = '**/*_spec.rb'
   end
 end
