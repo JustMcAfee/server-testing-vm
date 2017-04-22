@@ -25,3 +25,14 @@ describe file('/fileshare/testuser') do
   it { should be_mode 770 }
   it { should be_grouped_into 'testuser' }
 end
+
+describe file('/etc/samba/smb.conf') do
+  it { should be_file }
+  it { should contain '[testuser]' }
+  it { should contain '[media]' }
+  it { should contain '[household]' }
+end
+
+describe service('smbd') do
+  it { should be_enabled }
+end
