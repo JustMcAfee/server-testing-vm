@@ -6,4 +6,5 @@
     - linux
     - unix
     - server
+    - { name: mrlesmithjr.samba, become: yes }
 

@@ -10,13 +10,13 @@ end
 
 describe file('/fileshare/media') do
   it { should be_directory }
-  it { should be_mode 770 }
+  it { should be_mode 774 }
   it { should be_grouped_into 'media-access' }
 end
 
 describe file('/fileshare/household') do
   it { should be_directory }
-  it { should be_mode 770 }
+  it { should be_mode 774 }
   it { should be_grouped_into 'household-access' }
 end
 

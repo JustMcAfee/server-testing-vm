@@ -26,10 +26,11 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "ansible" do |ansible|
     ansible.verbose = "v"
+    ansible.galaxy_role_file = "requirements.yml"
     ansible.playbook = "test.yaml"
   end
 
   config.vm.provision :serverspec do |spec|
-    spec.pattern = '**/*_spec.rb'
+    spec.pattern = 'spec/*_spec.rb'
   end
 end
