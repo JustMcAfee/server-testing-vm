@@ -43,3 +43,4 @@ shares:
   testuser:
     group: testuser
 
+alert_email: JustMcAfee@users.noreply.github.com
