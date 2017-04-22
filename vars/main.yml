@@ -26,3 +26,20 @@ git_email: JustMcAfee@users.noreply.github.com
 pip_executable: '/usr/bin/pip'
 gem_sources:
   - 'https://rubygems.org/'
+
+usergroups: 
+  - media-access
+  - household-access
+
+accounts:
+  testuser:
+    groups: media-access,household-access
+
+shares:
+  media:
+    group: media-access
+  household:
+    group: household-access
+  testuser:
+    group: testuser
+
