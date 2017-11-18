@@ -15,7 +15,7 @@ pip_executable: '/usr/bin/pip'
 gem_sources:
   - 'https://rubygems.org/'
 
-usergroups: 
+usergroups:
   - media-access
   - household-access
 
@@ -28,6 +28,7 @@ alert_email: JustMcAfee@users.noreply.github.com
 enable_dhcp_services: false
 samba_allow_guests: 'no'
 samba_create_domain_controller: false
+samba_primary_domain_controller: 'none'
 samba_create_domain_users: false
 samba_security: 'user'
 samba_server_role: 'standalone server'
